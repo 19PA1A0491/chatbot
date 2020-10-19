@@ -15,6 +15,6 @@ References:
   geeksforgeeks
   
   COLABARATARIES:
-K.Yashoda         - 19pa1a0473
+K.Yasoda         - 19pa1a0473
 L.Anasuya  Devi   - 19pa1a0491
 M.Jeevana Deepthi - 19pa1a0498
