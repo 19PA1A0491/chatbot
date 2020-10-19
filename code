@@ -1,0 +1,99 @@
+""Hello!Buddy....
+I am chatbot,Let's have some good time.....
+_Things which I can do__
+1.Evaluating Epressions
+2.suggest a company based on your B.Tech percentage
+3.I can interview you
+4.I can give comments of the interview too"""
+
+
+def chatbot_introduce():"
+    response=("Hello, nice meeting you! Iam interview management chatbot....")
+    print(response)
+chatbot_introduce()
+import random
+import time
+print("Hello, nice meeting you! Iam Interview Process Management Bot...May I know your sweet and cute name")
+name=input("enter your name ")
+t=time.localtime()
+current_time=time.strftime("%H",t)
+if(int(current_time) <12):
+	print("Good morning"+" "+name)
+elif(int(current_time)>=12 and int(current_time)<=17):
+	print("Good afternoon"+" "+name)
+elif(int(current_time)>=18 and int(current_time)<=22):
+	print("Good evening"+" "+name)
+else:
+	print("It's high time"+" "+name+"see you tomorrow")
+print('''Do you want any help regarding interviews...Then answer my question 
+What is your percentage in b.tech?''',)
+percentage=int(input())
+if(percentage>0 and percentage<=50):
+	comp1=["lenova","airtel","idea","uninor","reliance","samsung","maruthisuzuki"]
+	print("you can try in"+random.choice(comp1))
+elif(percentage>=50 and percentage<60):
+	comp2=["siemens","convergys","zensar","larsen","techMahindra"]
+	print("It is best to try in"+random.choice(comp2))
+	comp3=["tataMotors","mindTree","accenture","Hp","Hcl","Dell"]
+	print("you can have a good try in"+random.choice(comp3))
+else:
+	comp4=["cognizant","Infosys","Flipart","heuwai"]
+	print("you will be successful in trying any company but my suggestion is"+random.choice(comp4))
+str=input("enter your answer")
+print('''Don't sit like a rock,get up! work like a clock
+you have plenty of time,so you can try small mock interview questions
+what do you say?yes/no''')
+ans=input("enter your ans")
+if (ans=="yes"):
+	print('''ready steady go''')
+def questions():
+    print("Hello there",name,"!")
+
+    choice = random.choice("+-")
+    finish = False
+    questionnumber = 0
+    correctquestions = 0
+
+    while finish == False:
+        if questionnumber < 5 | questionnumber >= 0:
+            number1 = random.randrange(1,10)
+            number2 = random.randrange(1,10)
+            print((number1),(choice),(number2))
+            answer=int(input("What is the answer?"))
+            questionnumber = questionnumber + 1
+
+            if choice==("+"):
+                realanswer = number1+number2
+                if answer==realanswer:
+                    print("That's the correct answer")
+                    correctquestions = correctquestions + 1
+                else:
+                    print("Wrong answer, the answer was",realanswer,"!")
+             
+            elif choice==("-"):
+                realanswer = number1-number2
+
+                if answer==realanswer:
+                    print("That's the correct answer")
+                    correctquestions = correctquestions + 1
+                else:
+                    print("Wrong answer, the answer was",realanswer,"!")
+        else:
+            finish = True
+    else:
+            print("Good job",name,"! You have finished the quiz")
+            print("your score is",correctquestions)
+
+    if correctquestions==5:
+        print("excellent"+name)
+    elif correctquestions==4:
+        print("well done"+name)
+    elif correctquestions==3:
+        print("better attempt"+name)
+    elif correctquestions==2:
+        print("try hard next time"+name)
+    elif correctquestions==1:
+        print("you should work hard"+name)
+    else:
+        print("poor perfomance"+name)
+questions()
